@@ -42,7 +42,12 @@ public class ParticleObjPool : MonoBehaviour
             PoolDictionary.Add(pool.Tag, ObjectPool);
         }
     }
-
+    /// <summary>
+    /// For ParticleSystem
+    /// </summary>
+    /// <param name="tag"></param>
+    /// <param name="obj"></param>
+    /// <returns></returns>
     public IEnumerator RecycleObject(string tag, GameObject obj)
     {
         float duration = obj.GetComponent<ParticleSystem>().main.duration;
